@@ -131,7 +131,7 @@ class TokenAcquirer
         ; autohotkey는 13131.1111 을 스트링으로 인식하지 못하네요..
         d := Floor(b // 1)
         d0 := Floor(b // 1)
-        d1 := Floor((b-d0)*10000000000)
+        d1 := round((b-d0)*10000000000)
         b := d
         e := []
         g := 0
@@ -179,10 +179,11 @@ class TokenAcquirer
             a += e[value]
             a := this._xr(a, "+-a^+6")
         }
-
+        OutputDebug, % "before:" . a
         a := this._xr(a, "+-3^+b+-f")
         a ^= d1
-        a += 1
+        OutputDebug, % "a_val:" . a . " d1_val:" . d1
+        ; a += 1
         
         if a<0
         {

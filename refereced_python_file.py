@@ -180,6 +180,7 @@ class TokenAcquirer:
         print('aaaaaaaaaaa',a)
         a = self._xr(a, '+-3^+b+-f')
         print('alalalmost', a)
+        print('len d:', len(d))
         a ^= int(d[1]) if len(d) > 1 else 0
         print('almost last',a)
         if a < 0:  # pragma: nocover
