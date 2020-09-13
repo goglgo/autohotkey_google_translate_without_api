@@ -180,7 +180,7 @@ class TokenAcquirer:
         print('aaaaaaaaaaa',a)
         a = self._xr(a, '+-3^+b+-f')
         print('alalalmost', a)
-        print('len d:', len(d))
+        print('len d:', len(d), ' d1:', d[1])
         a ^= int(d[1]) if len(d) > 1 else 0
         print('almost last',a)
         if a < 0:  # pragma: nocover
@@ -197,6 +197,6 @@ class TokenAcquirer:
 
 if __name__ == "__main__":
     acquirer = TokenAcquirer(client=httpx.Client())
-    text = 'hello'
+    text = 'masterpiece'
     tk = acquirer.do(text)
     print(tk)

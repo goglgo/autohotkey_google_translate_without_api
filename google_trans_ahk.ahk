@@ -5,7 +5,7 @@ SetWorkingDir, %A_ScriptDir%
 #Include %A_ScriptDir%\lib\URL_Encoder.ahk
 
 ; ¿¹½Ã: 
-want_text := "hello"
+want_text := "masterpiece"
 tl := "ko" ; or en. it means target_language
 
 translator := new Translate(tl)
@@ -179,10 +179,11 @@ class TokenAcquirer
             a += e[value]
             a := this._xr(a, "+-a^+6")
         }
-        OutputDebug, % "before:" . a
+        OutputDebug, % "alalalmost before:" . a
         a := this._xr(a, "+-3^+b+-f")
+        OutputDebug, % "before a^ before:" . a
         a ^= d1
-        OutputDebug, % "a_val:" . a . " d1_val:" . d1
+        OutputDebug, % "almost last a_val:" . a . " d1_val:" . d1
         ; a += 1
         
         if a<0
