@@ -132,6 +132,9 @@ class TokenAcquirer
         d := Floor(b // 1)
         d0 := Floor(b // 1)
         d1 := round((b-d0)*10000000000)
+        if(mod(200,10) = 0) {
+            d1 := d1 // 10
+        }
         b := d
         e := []
         g := 0
