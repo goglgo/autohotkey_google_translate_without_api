@@ -2,3 +2,4 @@
 res.txt
 *.bak
 test.ahk
+__pycache__
